@@ -27,7 +27,14 @@ const UserSchema= new mongoose.Schema({
         },
         message: 'Password must be at least 8 characters long',
       },
+},
+token: {
+  type: String,
+},
+role: {
+  type: String,
 }
+
 });
 const UserSignUp=mongoose.model("UserSignUp",UserSchema);
 module.exports=UserSignUp;
